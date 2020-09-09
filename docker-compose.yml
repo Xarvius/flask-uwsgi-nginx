@@ -5,6 +5,8 @@ services:
   flask:
     build: ./flask
     container_name: flask
+    volumes:
+      - ./flask:/flask'
     restart: always
     environment:
       - APP_NAME=FlaskServer
