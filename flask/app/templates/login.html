@@ -1,0 +1,9 @@
+{% extends "basic.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block body %}
+    <form class="form form-horizontal" action = "" method = "post" required>
+        {{ form.csrf_token }}
+        {{ wtf.form_field(form.username, placeholder="Your username") }}
+        {{ wtf.form_field(form.submit, class="btn btn-primary") }}
+    </form>
+{% endblock %}
